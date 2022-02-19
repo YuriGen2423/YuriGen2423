@@ -1,4 +1,4 @@
 - 👋 Hi, I’m @YuriGen2423
-- 👀 I’m interested in coding in java and c++
-- 🌱 I’m currently learning c++
+- 👀 I’m interested in coding in java and python
+- 🌱 I’m currently learning java and python
 - 📫 How to reach me lobinhofofoaj@gmail.com or on discord: YuriGen#7945
