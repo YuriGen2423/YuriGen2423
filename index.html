@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        button
+        {
+            border: none;
+        }
+    </style>
+    <title>Undefined</title>
+</head>
+<body>
+
+    <h1>Hello!</h1>
+
+    <div id="showUser" class="showUser">User: </div>
+    
+    <button onclick="reregister();">re-register</button>
+    
+    <script> /* register */
+    
+        while (localStorage.getItem("user") === null)
+        {
+            var user = prompt("what's your name?");
+            console.log(user);
+            if (user == "")
+            {
+                if (confirm("Do you want to not register?"))
+                {
+                    localStorage.setItem("user","null")
+                    break;
+                }
+            } else
+            {
+                localStorage.setItem("user", user);
+            }
+        }
+        alert('Hello! and welcome ' + localStorage.getItem("user"));
+
+        showUser = document.getElementById("showUser");
+        showUser.innerHTML = showUser.innerHTML + localStorage.getItem("user");
+        showUser.style.position = "relative";
+        const callibration = 110;
+        showUser.style.top = (window.innerHeight-callibration) + "px";
+        console.info((window.innerHeight-callibration) + "px");
+
+        function reregister()
+        {
+            localStorage.removeItem("user");
+            location.reload();
+        }
+    </script>
+</body>
+</html>
